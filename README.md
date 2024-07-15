@@ -44,8 +44,8 @@ This project is a stock portfolio tracker application. It leverages React, Chakr
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/stock-portfolio-tracker.git
-    cd stock-portfolio-tracker
+    git clone https://github.com/arnav45656/GolangStocksPortfolio.git
+    cd GolangStocksPortfolio
     ```
 
 2. **Install dependencies**
