@@ -4,7 +4,10 @@
 
 https://github.com/user-attachments/assets/8f407503-9370-4ea3-a442-9cd14777bc03
 
-
+Updates() : 
+Implemented JWT Auth at Login
+React SignUp and Login Page Setup
+Backend Rate Limiter implemented with max 4 bursts of requests with consume rate of 2
 
 ## Description
 
