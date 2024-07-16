@@ -1,8 +1,12 @@
 # Stock Portfolio Tracker ArnavStocks
 
-
-
 https://github.com/user-attachments/assets/8f407503-9370-4ea3-a442-9cd14777bc03
+
+**Updated(RabbitMQ Implementation Server Side Logging)
+**
+https://github.com/user-attachments/assets/fa2d4e0b-11f8-471d-a8ae-3df196c1818d
+
+
 
 Updates() : 
 Implemented JWT Auth at Login
