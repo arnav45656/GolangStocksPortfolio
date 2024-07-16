@@ -4,6 +4,12 @@ import (
 	"gorm.io/gorm"
 )
 
+type UserPayload struct {
+	gorm.Model
+	Username string `gorm:"unique;not null"`
+	Password string `gorm:"not null"`
+}
+
 type User struct {
 	gorm.Model
 	UserName    string       `gorm:"unique;not null"`

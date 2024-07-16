@@ -14,6 +14,7 @@ type Config struct {
 	DBPasswd   string
 	DBAddr     string
 	DBName     string
+	SECRET     string
 }
 
 var Envs = initConfig()
@@ -27,6 +28,7 @@ func initConfig() Config {
 		DBPasswd:   getEnv("DB_PASSWORD", "testuser"),
 		DBAddr:     fmt.Sprintf("%s:%s", getEnv("DB_HOST", "localhost"), getEnv("DB_PORT", "3306")),
 		DBName:     getEnv("DB_NAME", "stocks"),
+		SECRET:     getEnv("SECRET", "Arnav"),
 	}
 }
 

@@ -8,6 +8,7 @@ import (
 	"github.com/ImArnav19/stocks/controllers"
 	"github.com/ImArnav19/stocks/models"
 	"github.com/ImArnav19/stocks/services"
+	"github.com/ImArnav19/stocks/utils"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -22,11 +23,13 @@ func main() {
 
 	}
 
-	db.AutoMigrate(&models.User{}, &models.Wallet{}, &models.Investment{}, &models.Sell{}, &models.Watchlist{})
+	db.AutoMigrate(&models.UserPayload{}, &models.User{}, &models.Wallet{}, &models.Investment{}, &models.Sell{}, &models.Watchlist{})
 
 	app := &services.App{DB: db}
 
 	router := controllers.NewRouter(app)
+
+	go utils.CleanupClients()
 
 	router.Run(":" + config.Envs.Port)
 

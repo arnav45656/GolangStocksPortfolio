@@ -104,7 +104,7 @@ function DataProviderWrapper(props) {
               investments :[],
               sells : [],
               balance : balance,
-              watchlist: [],
+              watchlist: [], 
             };
             createUser(newUser).then(createdUser => {
                 console.log(createdUser)
