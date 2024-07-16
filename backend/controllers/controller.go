@@ -11,6 +11,7 @@ func NewRouter(app *services.App) *gin.Engine {
 	router := gin.Default()
 	router.Use(cors.Default())
 	router.Use(utils.RateLimitHandler())
+	router.Use(utils.RabbitMQHandler())
 
 	//Public routes
 	router.POST("/login", app.Login)

@@ -1,0 +1,4 @@
+{"ClientIP":"::1","datalenght":28,"duration":787464,"method":"GET","path":"/users/31","referer":"","status":404,"timestamp":"2024-07-17T00:04:55+05:30","userAgent":"PostmanRuntime/7.37.3"}
+{"ClientIP":"::1","datalenght":28,"duration":602270,"method":"GET","path":"/users/32","referer":"","status":404,"timestamp":"2024-07-17T00:05:07+05:30","userAgent":"PostmanRuntime/7.37.3"}
+{"ClientIP":"::1","datalenght":353,"duration":5063978,"method":"GET","path":"/users/username/Arnav","referer":"","status":200,"timestamp":"2024-07-17T00:05:21+05:30","userAgent":"PostmanRuntime/7.37.3"}
+{"ClientIP":"::1","datalenght":357,"duration":1592687,"method":"GET","path":"/users/username/Arnab","referer":"","status":200,"timestamp":"2024-07-17T00:05:26+05:30","userAgent":"PostmanRuntime/7.37.3"}
