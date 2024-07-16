@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { Route, Routes } from "react-router-dom"
+import { useContext,useState } from "react"
+import { Navigate, Route, Routes } from "react-router-dom"
 import Layout from "../src/components/Layout/Layout"
 import News from "../src/components/News/News"
 import StockDetails from "../src/components/Stocks/StocksComponents/StockDetails"
@@ -9,13 +9,15 @@ import Overview from "./components/Overview/Overview"
 import Wallet from "./components/Wallet/Wallet"
 import { Welcomme } from "./components/Welcomme/Welcomme"
 import { DataContext } from "./context/data.context"
+import Login from "./components/LogSign/Login"
 
 function App() {
   const { user } = useContext(DataContext)
+  
   return (
     <>
       {
-        user.userName === ''
+        user.userName === '' 
           ? <Welcomme />
           : <Layout>
             <Routes>
@@ -28,6 +30,7 @@ function App() {
               <Route path='*' element={<Overview />} />
             </Routes>
           </Layout>
+        
       }
     </>
   )

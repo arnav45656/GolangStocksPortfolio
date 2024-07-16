@@ -17,6 +17,7 @@ function DataProviderWrapper(props) {
     const [watchlist, setWatchlist] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
     const [isSearching, setIsSearching] = useState(false);
+    const [authToken, setAuthToken] = useState(localStorage.getItem('jwtToken') || '');
 
     // useEffect(() => {
     //     const loadData = async () => {
@@ -166,6 +167,8 @@ function DataProviderWrapper(props) {
         setWatchlist(selectedStocks);
     };
 
+    
+
     return (
         <DataContext.Provider
             value={{
@@ -191,6 +194,7 @@ function DataProviderWrapper(props) {
                 setSearchResults,
                 isSearching,
                 setIsSearching,
+                
             }}
         >
             {props.children}

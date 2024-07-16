@@ -5,7 +5,7 @@ import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { DataProviderWrapper } from './context/data.context'
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router , Routes,Route} from "react-router-dom"
 
 const colors = {
   
