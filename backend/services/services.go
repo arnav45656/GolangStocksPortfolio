@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/ImArnav19/stocks/config"
+	"github.com/ImArnav19/stocks/gemini"
 	"github.com/ImArnav19/stocks/models"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v4"
@@ -136,4 +137,22 @@ func (app *App) Login(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"token": tokenString})
+}
+
+func (app *App) GetGeminiResponse(c *gin.Context) {
+
+	resp := gemini.GetPmt1()
+
+	c.JSON(http.StatusOK, gin.H{"response": resp})
+
+}
+
+func (app *App) PostGeminiResponse(c *gin.Context) {
+	var req models.GeminiRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+	resp := gemini.GetData(req.Prompt, c)
+	c.JSON(http.StatusOK, gin.H{"response": resp})
 }

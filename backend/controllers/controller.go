@@ -26,6 +26,9 @@ func NewRouter(app *services.App) *gin.Engine {
 		authorized.POST("/users", app.CreateUser)
 		authorized.PUT("/users/:id", app.UpdateUser)
 		authorized.DELETE("/users/:id", app.DeleteUser)
+
+		authorized.GET("/gemini", app.GetGeminiResponse)
+		authorized.POST("/gemini")
 	}
 
 	return router

@@ -10,6 +10,10 @@ type UserPayload struct {
 	Password string `gorm:"not null"`
 }
 
+type GeminiRequest struct {
+	Prompt string `json:"prompt"`
+}
+
 type User struct {
 	gorm.Model
 	UserName    string       `gorm:"unique;not null"`
