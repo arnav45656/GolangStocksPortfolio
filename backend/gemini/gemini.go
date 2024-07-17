@@ -10,7 +10,7 @@ import (
 	"google.golang.org/api/option"
 )
 
-const API_KEY = "AIzaSyAriaCJwE3ix_WDuMD3eTrh7gXvLQWe_2s"
+const API_KEY = ""
 
 func initClient() *genai.Client {
 	ctx := context.Background()
